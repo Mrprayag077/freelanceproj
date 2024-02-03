@@ -2,7 +2,7 @@
 
 ### Disaster Management 
 
-![App Screenshot](./images/GIT/1.1.png)
+
 
 
 ## Tech Stack
