@@ -1,4 +1,13 @@
-//   all ------------------ three 
+// Function to generate a random value from a given array
+function randomValue(array) {
+    return array[Math.floor(Math.random() * array.length)];
+}
+
+// Example arrays for size and position
+const sArray = [30, 40, 50, 60, 70]; // Sizes of bubbles
+const bArray = [0, 100, 200, 300, 400]; // Possible left positions (adjust as necessary)
+
+// Existing initParadoxWay function
 function initParadoxWay() {
     "use strict";
    
@@ -24,14 +33,11 @@ function initParadoxWay() {
                 1024: {
                     slidesPerView: 3,
                 },
-                
             }
         });
     }
     
-// bubbles -----------------
-    
-    
+    // bubbles -----------------
     setInterval(function () {
         var size = randomValue(sArray);
         $('.bubbles').append('<div class="individual-bubble" style="left: ' + randomValue(bArray) + 'px; width: ' + size + 'px; height:' + size + 'px;"></div>');
@@ -39,13 +45,12 @@ function initParadoxWay() {
             'bottom': '100%',
             'opacity': '-=0.7'
         }, 4000, function () {
-            $(this).remove()
+            $(this).remove();
         });
     }, 350);
-    
 }
 
-//   Init All ------------------
+// Init All ------------------
 $(document).ready(function () {
     initParadoxWay();
 });
